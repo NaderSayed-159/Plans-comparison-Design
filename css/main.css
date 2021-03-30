@@ -1,0 +1,213 @@
+.parent {
+    display: grid;
+    width: 100%;
+    height: 800px;
+    grid-template: 10% 1fr 10% /10% 40% 40% 10%;
+    background-color: #F6F6F6;
+    margin: 20px;
+    padding: 20px;
+}
+
+.parent .save-par {
+    grid-column: span 3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.parent .save-par .save {
+    background-color: #2196F3;
+    padding: 10px;
+    padding-right: 30px;
+    position: relative;
+    font-weight: bold;
+    transition: transform 1s;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+}
+
+.parent .save-par .save::after {
+    content: "";
+    border: 20px solid #F6F6F6;
+    border-color: transparent #F6F6F6 transparent transparent;
+    position: absolute;
+    right: 0;
+    top: -1px;
+}
+
+.parent .basic {
+    display: grid;
+    grid-area: 2/2/4/3;
+
+}
+
+.parent .comp.prof {
+    display: grid;
+    grid-area: 2/3/4/4;
+    margin-left: 20px;
+}
+
+.parent .comp {
+    text-transform: capitalize;
+    border: 1px solid #F6F6F6;
+    /* border-radius: 10px; */
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+
+.parent .basic .title {
+    background-color: #F44336;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: white;
+}
+
+.parent .prof .title {
+    background-color: #2196F3;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: white;
+}
+
+.parent .comp>div:not([class=title]) {
+    border-bottom: 1px solid #F6F6F6;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.parent .comp>div:not([class=title]):hover {
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    box-shadow: 0px 5px 5px 5px black;
+    z-index: 11111;
+}
+
+.parent .comp div .sign.right {
+    background-color: #009688;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    padding: 8px;
+    margin: 0 10px;
+    position: relative;
+}
+
+.parent .comp div .sign.right::before {
+    content: "";
+    width: 3px;
+    height: 7px;
+    background-color: #009688;
+    border: 3px solid;
+    border-color: transparent white white transparent;
+    transform: rotate(40deg);
+    -webkit-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+    -o-transform: rotate(40deg);
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+    transition: transform 1s;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+}
+
+.parent .comp div .sign.wrong {
+    background-color: #E91E63;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    padding: 8px;
+    margin: 0 10px;
+    position: relative;
+}
+
+.parent .comp div .sign.wrong::before {
+    content: "x";
+    width: 3px;
+    height: 3px;
+    background-color: #E91E63;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    left: 6.5px;
+    bottom: 16px;
+    transition: transform 1s;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+}
+
+.parent .comp div .sign:hover {
+    transform: scale(1.5) rotate(10deg) rotate(-20deg);
+    -webkit-transform: scale(1.5) rotate(10deg) rotate(-20deg);
+    -moz-transform: scale(1.5) rotate(10deg) rotate(-20deg);
+    -ms-transform: scale(1.5) rotate(10deg) rotate(-20deg);
+    -o-transform: scale(1.5) rotate(10deg) rotate(-20deg);
+}
+
+.parent .prof div:nth-last-of-type(2) {
+    position: relative;
+}
+
+.parent .prof div:nth-last-of-type(2) span {
+    background-color: #7E7E7E;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    padding: 8px;
+    margin: 0 10px;
+    position: absolute;
+    right: 0;
+}
+
+.parent .prof div:nth-last-of-type(2) span:nth-last-child(1):after {
+    content: "?";
+    background-color: transparent;
+    width: 5px;
+    height: 5px;
+    color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    padding: 8px;
+    margin: 0 10px;
+    text-align: center;
+    position: absolute;
+    left: -10.5px;
+    bottom: 6px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
